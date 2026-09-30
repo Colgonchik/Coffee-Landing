@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+      <title>Coffee Breakers</title>
+      <style>
+         :root{
+            --accent: #E6C288;
+            --bg-card:  rgba(255, 255, 255, 0.15);
+            scroll-behavior: smooth;
+         }
+         * {
+            box-sizing: border-box;
+         }
+         body {
+            margin: 0;
+            font-family: 'Raleway', sans-serif;
+            
+            background-image: linear-gradient(to bottom,#1A0F0A, #D29062);
+  
+            padding: 30px;
+            border-radius: 10px;
+            color: #F5EBE6;
+         }
+         a {
+            text-decoration: none;
+            color: var(--accent);
+            font-weight: 600;
+            transition: all 0.3 ease;
+         }
+         nav > a{
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #F5EBE6;
+         }
+         nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 30px;
+         }
+         nav ul{
+            list-style: none;
+            display: flex;
+            gap: 20px;
+         }
+         .features{
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+         }
+         .beans-list{
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+         }
+         .feature-card{
+            flex: 1;
+            background: var(--bg-card);
+            padding: 20px;
+            border-radius: 12px;
+         }
+         .bean-card{
+            flex: 1;
+            background: var(--bg-card);
+            padding: 20px;
+            border-radius: 12px;
+         }
+         h3{
+            color: var(--accent);
+         }
+         .gallery{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+         }
+         .gallery-card{
+            background: var(--bg-card);
+            padding: 20px;
+            border-radius: 12px;
+         }
+         .img-placeholder{
+            width: 100%;
+            height: 150px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            object-fit: cover;
+            display: block;
+         }
+         @media (max-width: 768px) {
+            .gallery {
+               grid-template-columns: repeat(2, 1fr);
+            }
+
+            .features, .beans-list {
+               flex-wrap: wrap;
+            }
+         }
+         @media (max-width: 480px) {
+            .gallery {
+               grid-template-columns: 1fr;
+            }
+
+            nav {
+               flex-direction: column;
+               align-items: flex-start;
+               gap: 15px;
+            }
+
+            nav ul {
+               flex-direction: column;
+               gap: 10px;
+            }
+
+            h1 {
+               font-size: 28px;
+            }
+         }
+      </style>
+   </head>
+   <body>
+      <header>
+         <nav>
+            <a href="#">COFFEE BREAKERS</a>
+            <ul>
+               <li><a href="#about">О нас</a></li>
+               <li><a href="#beans">Зёрна</a></li>
+               <li><a href="#gallery">Галерея</a></li>
+               <li><a href="#contacts">Контакты</a></li>
+            </ul>
+         </nav>
+      </header>
+      <main>
+            <section id="about">
+               <h1>НАПИТОК, ЛОМАЮЩИЙ ВАШИ ПРЕДСТАВЛЕНИЯ О ПРИВЫЧНОМ КОФЕ</h1>
+               <h2>О проекте</h2>
+               <p>Это не просто место, чтобы насладиться кофе, а невероятно уютная атмосфера, в которую хочется возвращаться вновь и вновь.</p>
+               <div class="features">
+                  <div class="feature-card">
+                     <h3>ВСЕ ИЗВЕСТНЫЕ СОРТА ЗЁРЕН</h3>
+                     <p>Эфиопия, Колумбия, Бразилия</p>
+                  </div>
+                  <div class="feature-card">
+                     <h3>ЗАКАЗ ЧЕРЕЗ ПРИЛОЖЕНИЕ</h3>
+                     <p>Вы можете оплатить свой любимый кофе, даже не подходя к кассе</p>
+                  </div>
+                  <div class="feature-card">
+                     <h3>КАЖДЫЙ 10-й СТАКАН БЕСПЛАТНО</h3>
+                     <p>Закажи кофе 9 раз и получи 10-ю порцию абсолютно бесплатно</p>
+                  </div>
+               </div>
+            </section>
+            <section id="beans">
+               <h2>Наша гордость</h2>
+               <p>Мы привозим для вас зерно со всех уголков планеты</p>
+
+               <div class="beans-list">
+
+                  <div class="bean-card">
+                     <h3>АФРИКА</h3>
+                     <p>Яркая цитрусовая и ягодная кислинка</p>
+                  </div>
+                  <div class="bean-card">
+                     <h3>ЦЕНТРАЛЬНАЯ АМЕРИКА</h3>
+                     <p> Сладкий, с мягкой фруктовой кислинкой и шоколадным послевкусием</p>
+                  </div>
+                  <div class="bean-card">
+                     <h3>ЮЖНАЯ АМЕРИКА</h3>
+                     <p> Плотное тело, ореховые, шоколадные, карамельные и сливочные ноты</p>
+                  </div>
+                  <div class="bean-card">
+                     <h3>АЗИЯ И ОКЕАНИЯ</h3>
+                     <p> Землистые, древесные, пряные и табачные ноты</p>
+                  </div>
+
+               </div>
+            </section>
+            <section id="gallery">
+               <h2>Наше меню</h2>
+               <div class="gallery">
+
+                  <div class="gallery-card">
+                     <img src="https://placehold.co/400x250/D29062/1A0F0A?text=АМЕРИКАНО" alt="Чашка классического американо в белой керамической кружке на деревянном столе" class="img-placeholder">
+                     <h3>АМЕРИКАНО</h3>
+                     <p>Вечная классика, любимая многими</p>
+                  </div>
+
+                  <div class="gallery-card">
+                     <img src="https://placehold.co/400x250/E6C288/1A0F0A?text=ЧИЗКЕЙК" 
+                        alt="Кусочек чизкейка на черной тарелке, украшенный свежей клубникой" 
+                        class="img-placeholder">
+                     <h3>ЧИЗКЕЙК</h3>
+                     <p>Нежнейший десерт, вошедший в историю</p>
+                  </div>
+
+                  <div class="gallery-card">
+                     <img src="https://placehold.co/400x250/A67B5B/F5EBE6?text=ЛАТТЕ" 
+                        alt="Высокий стакан латте с молочной пенкой на светлом столе" 
+                        class="img-placeholder">
+                     <h3>ЛАТТЕ</h3>
+                     <p>Молочная сказка с мягким кофейным слоем</p>
+                  </div>
+               </div>
+            </section>
+            <section id="contacts">
+               <h2>Как нас найти</h2>
+               <p>Адрес: ул. Вкусного кофе, д. 1</p>
+               <p>Часы работы: Ежедневно с 08:00 до 23:00</p>
+               <p>Соцсети: <a href="#" style="color: var(--accent);">Telegram</a></p>
+            </section>
+         </main>
+         <footer>
+            <p>&copy; 2026 Coffee Breakers</p>
+         </footer>
+   </body>
+</html>
